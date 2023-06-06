@@ -1,0 +1,19 @@
+import React from "react";
+import PropTypes from "prop-types";
+import "./styles.scss";
+AlbumItem.propTypes = {
+  album: PropTypes.object.isRequired,
+};
+
+function AlbumItem({ album }) {
+  return (
+    <div className="album">
+      <div className="album__thumbnail">
+        <img src={album.thumbnailUrl} alt={album.name} />
+      </div>
+      <div className="album__name">{album.name}</div>
+    </div>
+  );
+}
+
+export default AlbumItem;
